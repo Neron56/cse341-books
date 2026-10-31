@@ -1,16 +1,32 @@
 {
-  "devDependencies": {
-    "eslint": "^10.13.0",
-    "nodemon": "^3.1.14"
+  "name": "your-repo-here",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/your-user/your-repo-here#readme",
+  "bugs": {
+    "url": "https://github.com/your-user/your-repo-here/issues"
   },
-  "dependencies": {
-    "express": "^5.3.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-user/your-repo-here.git"
   },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "server.js",
   "scripts": {
     "start": "node --env-file=.env server.js",
     "dev": "nodemon --env-file=.env server.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "eslint": "^10.14.0",
+    "nodemon": "^3.1.14"
+  },
+  "dependencies": {
+    "express": "^5.3.0",
+    "mongodb": "^7.8.0"
   }
 }
