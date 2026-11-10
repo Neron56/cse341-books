@@ -42,8 +42,8 @@ const deleteBook = async (id) => {
 const authorExists = async (id) => {
   const db = getDb();
   const collection = db.collection('authors');
-  const count = await collection.countDocuments({ authorId: id });
-
+  const count = await collection.countDocuments({ id: id });
+  console.log(count)
   return count > 0;
 };
 

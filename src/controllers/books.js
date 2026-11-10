@@ -41,7 +41,7 @@ const createBook = async (req, res) => {
       return res.status(400).json({ message: 'Book id already exists.' });
     }
 
-    if (await authorExists(author)) {
+    if (await authorExists(author) == 0) {
       return res.status(409).json({ message: 'book cannot be created because the author doesnt exist.' });
     }
     const createdBook = await createBookFromDb({ id, author, title, publicationDate });
